@@ -1,0 +1,18 @@
+<h1>Resume stuff here!</h1>
+
+
+#if ($resumes)
+  #foreach($resume in $resumes)
+    <h3>$resume.getCompany()</h3>
+    <ul>
+      <li>$resume.getPosition()</li>
+      <li>$resume.getLocation()</li>
+      <li>$resume.getDescription()</li>
+      <li>$resume.getDate()</li>
+    </ul>
+  #end
+#else
+  <p>No resume yet!</p>
+#end
+
+<a href="/">Go back</a>
